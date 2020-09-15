@@ -30,8 +30,6 @@ jobs:
         # uses: checkmarx-ts/checkmarx-cxflow-github-action@95d2a8c86d754ddbccc638a7e1bb8e99a8d2244f
         uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
         with:
-          checkmarx_version: 9.0
-          checkmarx_scope: access_control_api sast_rest_api
           # Provide Checkmarx URL
           checkmarx_url: https://cxprivatecloud.checkmarx.net
           # Select a Checkmarx Team
@@ -53,6 +51,6 @@ jobs:
           # Incremental Scans?
           incremental: true
           # Additional CLI parameters
-          #params: # optional, default is 
+          params: --version=9.0
           # GitHub API Token
           github_token: ${{secrets.MY_GITHUB_TOKEN}} 
