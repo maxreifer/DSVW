@@ -32,11 +32,11 @@ jobs:
           # Provide team
           team: /CxServer/SP/EMEA/UK
           # Provide Checkmarx Username
-          checkmarx_username: ${{secrets.CHECKMARX_USERNAME}}
+          checkmarx_username: jbruinaud
           # Provide Checkmarx Password
-          checkmarx_password: ${{secrets.CHECKMARX_PASSWORD}}
+          checkmarx_password: YourCheckmarxSASTp@ssword123
           # Provide Checkmarx Client Secret
-          checkmarx_client_secret: ${{secrets.CHECKMARX_CLIENT_SECRET}}
+          checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
           # Select a Checkmarx Project
           project: DSVW-GitHub-action
           # Select an Application Name used by downstream bug tracker systems
