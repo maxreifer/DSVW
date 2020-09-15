@@ -28,13 +28,13 @@ jobs:
         uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
         with:
           # Provide Checkmarx URL
-          checkmarx_url: https://cxprivatecloud.checkmarx.net
+          checkmarx_url: https://blueprism.checkmarx.net
           # Provide team
-          team: /CxServer/SP/EMEA/UK
+          team: /CxServer
           # Provide Checkmarx Username
-          checkmarx_username: jbruinaud
+          checkmarx_username: cxsupport@checkmarx.com
           # Provide Checkmarx Password
-          checkmarx_password: YourCheckmarxSASTp@ssword123
+          checkmarx_password: Hbon38]ttZThU!0
           # Provide Checkmarx Client Secret
           checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
           # Select a Checkmarx Project
@@ -49,4 +49,4 @@ jobs:
           incremental: true
           # GitHub API Token
           github_token: ${{secrets.MY_GITHUB_TOKEN}}
-          params: --checkmarx.version=9.0 --checkmarx.scope=access_control_api sast_rest_api --checkmarx.base-url=https://cxprivatecloud.checkmarx.net --checkmarx.url=${checkmarx.base-url}/cxrestapi --checkmarx.portal-url=${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx --checkmarx.sdk-url=${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx --checkmarx.portal-wsdl=${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl --checkmarx.sdk-wsdl=${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl --logging.file.level.com.checkmarx.sdk.service.CxAuthService=TRACE
+          params: --checkmarx.version=9.0 --checkmarx.scope=access_control_api sast_rest_api --checkmarx.base-url=https://blueprism.checkmarx.net --checkmarx.url=${checkmarx.base-url}/cxrestapi --checkmarx.portal-url=${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx --checkmarx.sdk-url=${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx --checkmarx.portal-wsdl=${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl --checkmarx.sdk-wsdl=${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl --logging.file.level.com.checkmarx.sdk.service.CxAuthService=TRACE
