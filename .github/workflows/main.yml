@@ -51,6 +51,6 @@ jobs:
           # Incremental Scans?
           incremental: true
           # Additional CLI parameters
-          params: --version=9.0
+          params: --spring.config.location="./cxflow.yml"
           # GitHub API Token
           github_token: ${{secrets.MY_GITHUB_TOKEN}} 
