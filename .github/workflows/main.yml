@@ -49,4 +49,4 @@ jobs:
           incremental: true
           # GitHub API Token
           github_token: ${{secrets.MY_GITHUB_TOKEN}}
-          params: --checkmarx.version=9.0 --checkmarx.scope="access_control_api sast_rest_api" --checkmarx.base-url=https://cxprivatecloud.checkmarx.net --checkmarx.url=${checkmarx.base-url}/cxrestapi --checkmarx.portal-url=${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx --checkmarx.sdk-url=${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx --checkmarx.portal-wsdl=${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl --checkmarx.sdk-wsdl=${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
+          params: --checkmarx.version=9.0 --checkmarx.scope=access_control_api sast_rest_api --checkmarx.base-url=https://cxprivatecloud.checkmarx.net --checkmarx.url=${checkmarx.base-url}/cxrestapi --checkmarx.portal-url=${checkmarx.base-url}/cxwebinterface/Portal/CxWebService.asmx --checkmarx.sdk-url=${checkmarx.base-url}/cxwebinterface/SDK/CxSDKWebService.asmx --checkmarx.portal-wsdl=${checkmarx.base-url}/Portal/CxWebService.asmx?wsdl --checkmarx.sdk-wsdl=${checkmarx.base-url}/SDK/CxSDKWebService.asmx?wsdl
