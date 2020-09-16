@@ -25,7 +25,7 @@ jobs:
       - name: Checkmarx CxFlow Action
         # You may pin to the exact commit or the version.
         # uses: checkmarx-ts/checkmarx-cxflow-github-action@95d2a8c86d754ddbccc638a7e1bb8e99a8d2244f
-        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0
+        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0-9.x  
         with:
           # Provide Checkmarx URL
           checkmarx_url: https://blueprism.checkmarx.net
@@ -49,4 +49,3 @@ jobs:
           incremental: true
           # GitHub API Token
           github_token: ${{secrets.MY_GITHUB_TOKEN}}
-          params: --checkmarx.version=9.0 --checkmarx.scope=[access_control_api,sast_rest_api] --checkmarx.base-url=https://blueprism.checkmarx.net --checkmarx.url=https://blueprism.checkmarx.net/cxrestapi --checkmarx.portal-url=https://blueprism.checkmarx.net/cxwebinterface/Portal/CxWebService.asmx --checkmarx.sdk-url=https://blueprism.checkmarx.net/cxwebinterface/SDK/CxSDKWebService.asmx --checkmarx.portal-wsdl=https://blueprism.checkmarx.net/Portal/CxWebService.asmx?wsdl --checkmarx.sdk-wsdl=https://blueprism.checkmarx.net/SDK/CxSDKWebService.asmx?wsdl
