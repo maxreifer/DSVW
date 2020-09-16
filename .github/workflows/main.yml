@@ -48,6 +48,6 @@ jobs:
           # Incremental Scans?
           incremental: true
           # GitHub API Token
-          github_token: ${{secrets.MY_GITHUB_TOKEN}}
+          github_token: ${{secrets.GITHUB_TOKEN}}
           # extra parameters
-          params: --cx-flow.bug-tracker=GitHub --repo-name=DSVW --namespace=jbruinaud --branch=master --repo-url=https://github.com/jbruinaud/DSVW.git --app=DSVW --github-token=${{secrets.MY_GITHUB_TOKEN}}
+          params: --cx-flow.bug-tracker=GitHub --repo-name=DSVW --namespace=jbruinaud --branch=master --repo-url=https://github.com/jbruinaud/DSVW.git --app=DSVW
