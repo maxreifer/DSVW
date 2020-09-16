@@ -50,4 +50,4 @@ jobs:
           # GitHub API Token
           github_token: ${{secrets.MY_GITHUB_TOKEN}}
           # extra parameters
-          params: --cx-flow.bug-tracker=GitHub --cx-flow.bug-tracker-impl=GitHub --RepoName=DSVW --Namespace=DSVW --Branch=master
+          params: --cx-flow.bug-tracker=GitHub --cx-flow.bug-tracker-impl=GitHub --repo-name=DSVW --namespace=jbruinaud --branch=master
