@@ -46,7 +46,7 @@ jobs:
           # Break build based on Checkmarx findings?
           #break_build: # optional
           # Incremental Scans?
-          incremental: false
+          incremental: true
           # GitHub API Token
           github_token: ${{secrets.GITHUB_TOKEN}}
           # extra parameters
