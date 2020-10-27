@@ -1,3 +1,5 @@
+name: CxFlow Scheduled
+
 on:
   schedule:
   - cron: "0 0 * * 1-5"
