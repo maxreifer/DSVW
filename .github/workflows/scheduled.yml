@@ -1,4 +1,4 @@
-name: CxFlow Scheduled
+name: CxFlow nightly schedule
 
 on:
   schedule:
