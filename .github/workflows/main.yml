@@ -52,4 +52,4 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           # extra parameters
           #params: --cx-flow.bug-tracker=GitHub --repo-name=DSVW --namespace=jbruinaud --branch=master --repo-url=https://github.com/jbruinaud/DSVW.git
-          params: --cx-flow.filter-state=Confirmed,Urgent --bug-tracker=jira --config=cx.config --repo-name=DSVW --namespace=jbruinaud --branch=master --jira.url=${{secrets.JIRA_URL}} --jira.username=${{secrets.JIRA_USER}} --jira.token=${{secrets.JIRA_TOKEN}}
+          params: --cx-flow.filter-state=Confirmed,Urgent --bug-tracker=NONE --config=cx.config --repo-name=DSVW --namespace=jbruinaud --branch=master --jira.url=${{secrets.JIRA_URL}} --jira.username=${{secrets.JIRA_USER}} --jira.token=${{secrets.JIRA_TOKEN}}
