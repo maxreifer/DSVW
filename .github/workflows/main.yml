@@ -4,8 +4,8 @@ name: CxFlow on push and PR to master
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: [ master ]
+  #push:
+  #  branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -51,5 +51,5 @@ jobs:
           # GitHub API Token
           github_token: ${{secrets.GITHUB_TOKEN}}
           # extra parameters
-          #params: --cx-flow.bug-tracker=GitHub --repo-name=DSVW --namespace=jbruinaud --branch=master --repo-url=https://github.com/jbruinaud/DSVW.git
-          params: --cx-flow.filter-state=Confirmed,Urgent --bug-tracker=NONE --config=cx.config --repo-name=DSVW --namespace=jbruinaud --branch=master --jira.url=${{secrets.JIRA_URL}} --jira.username=${{secrets.JIRA_USER}} --jira.token=${{secrets.JIRA_TOKEN}}
+          params: --cx-flow.bug-tracker=GitHub --repo-name=DSVW --namespace=jbruinaud --branch=master --repo-url=https://github.com/jbruinaud/DSVW.git
+          #params: --cx-flow.filter-state=Confirmed,Urgent --bug-tracker=NONE --config=cx.config --repo-name=DSVW --namespace=jbruinaud --branch=master --jira.url=${{secrets.JIRA_URL}} --jira.username=${{secrets.JIRA_USER}} --jira.token=${{secrets.JIRA_TOKEN}}
