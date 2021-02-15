@@ -21,7 +21,7 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: checkmarx-ts/checkmarx-cxflow-github-action@95d2a8c86d754ddbccc638a7e1bb8e99a8d2244f
         # uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0-9.x
-        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.1
+        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0-9.x
         with:
           # Provide Checkmarx URL
           checkmarx_url: ${{secrets.CHECKMARX_URL}}
