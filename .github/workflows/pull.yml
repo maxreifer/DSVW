@@ -1,0 +1,52 @@
+# This is a basic workflow to help you get started with Actions
+name: CxFlow on push to master
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Cxflow Action
+      - name: Checkmarx CxFlow Action
+        # You may pin to the exact commit or the version.
+        # uses: checkmarx-ts/checkmarx-cxflow-github-action@95d2a8c86d754ddbccc638a7e1bb8e99a8d2244f
+        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.0-9.x
+        with:
+          # Provide Checkmarx URL
+          checkmarx_url: ${{secrets.CHECKMARX_URL}}
+          # Provide team
+          team: /CxServer/SP/EMEA/UK
+          #team: /CxServer
+          # Provide Checkmarx Username
+          checkmarx_username: ${{secrets.CHECKMARX_USERNAME}}
+          # Provide Checkmarx Password
+          checkmarx_password: ${{secrets.CHECKMARX_PASSWORD}}
+          # Provide Checkmarx Client Secret
+          checkmarx_client_secret: ${{secrets.CHECKMARX_CLIENT_SECRET}}
+          # Select a Checkmarx Project
+          project: DSVW-GitHub-action
+          # Select an Application Name used by downstream bug tracker systems
+          app: DSVW
+          # Select a Checkmarx Preset
+          #preset: # optional, default is Checkmarx Default
+          # Break build based on Checkmarx findings?
+          #break_build: # optional
+          # Incremental Scans?
+          incremental: true
+          # GitHub API Token
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          # extra parameters
+          params: --cx-flow.bug-tracker=GITHUBPULL --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }}
