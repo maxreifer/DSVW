@@ -29,7 +29,7 @@ jobs:
           # Provide Checkmarx URL
           checkmarx_url: ${{secrets.CHECKMARX_URL}}
           # Provide team
-          team: /CxServer/SP/EMEA/UK
+          team: /EMEA/UK
           #team: /CxServer
           # Provide Checkmarx Username
           checkmarx_username: ${{secrets.CHECKMARX_USERNAME}}
