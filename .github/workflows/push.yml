@@ -47,6 +47,7 @@ jobs:
           #break_build: # optional
           # Incremental Scans?
           incremental: true
+          scanners: sast
           # GitHub API Token
           github_token: ${{secrets.GITHUB_TOKEN}}
           # extra parameters
