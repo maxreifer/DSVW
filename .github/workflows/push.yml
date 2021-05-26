@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Cxflow Action
+      - name: Set env
+        run: echo ::set-env name=REPOSITORY_NAME::${GITHUB_REPOSITORY#*\/}
       - name: Checkmarx CxFlow Action
         # You may pin to the exact commit or the version.
         # uses: checkmarx-ts/checkmarx-cxflow-github-action@95d2a8c86d754ddbccc638a7e1bb8e99a8d2244f
@@ -38,7 +40,7 @@ jobs:
           # Provide Checkmarx Client Secret
           checkmarx_client_secret: ${{secrets.CHECKMARX_CLIENT_SECRET}}
           # Select a Checkmarx Project
-          project: ${GITHUB_REPOSITORY#*\/}
+          project: $REPOSITORY_NAME
           # Select an Application Name used by downstream bug tracker systems
           app: DSVW
           # Select a Checkmarx Preset
