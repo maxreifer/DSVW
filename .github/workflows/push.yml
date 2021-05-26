@@ -38,7 +38,7 @@ jobs:
           # Provide Checkmarx Client Secret
           checkmarx_client_secret: ${{secrets.CHECKMARX_CLIENT_SECRET}}
           # Select a Checkmarx Project
-          project: DSVW-GitHub-action
+          project: ${GITHUB_REPOSITORY#*\/}
           # Select an Application Name used by downstream bug tracker systems
           app: DSVW
           # Select a Checkmarx Preset
