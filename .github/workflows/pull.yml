@@ -40,6 +40,7 @@ jobs:
           project: DSVW-GitHub-action
           # Select an Application Name used by downstream bug tracker systems
           app: DSVW
+          scanners: sast,sca
           # Select a Checkmarx Preset
           #preset: # optional, default is Checkmarx Default
           # Break build based on Checkmarx findings?
