@@ -6,7 +6,7 @@ Damn Small Vulnerable Web [![Python 3.x](https://img.shields.io/badge/python-3.x
 
 **Damn Small Vulnerable Web** (DSVW) is a deliberately vulnerable web application written in under 100 lines of code, created for educational purposes. It supports majority of (most popular) web application vulnerabilities together with appropriate attacks.
 
-![XSS](http://i.imgur.com/BoSOgJs.png)
+![XSS](http://i.imgur.com/BoSOgJs.png) ------
 
 Quick start
 ----
